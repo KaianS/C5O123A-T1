@@ -1,3 +1,10 @@
+/*
+ * Temporizador Periódico - Semáforo
+ * Autor: [Seu Nome] | Data: [Data Atual]
+ * Descrição: Alterna LEDs (vermelho, amarelo, verde) a cada 3s usando add_repeating_timer_ms().
+ */
+
+
 #include "pico/stdlib.h"
 #include "hardware/timer.h"
 
