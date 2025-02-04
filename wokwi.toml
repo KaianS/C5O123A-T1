@@ -1,0 +1,16 @@
+[wokwi]
+version = 1
+firmware = 'build/ATIVIDADE01.hex'
+elf = 'build/ATIVIDADE01.elf'
+
+[[pin]]
+number = 2
+mode = "output" # LED Vermelho
+
+[[pin]]
+number = 3
+mode = "output" # LED Amarelo
+
+[[pin]]
+number = 4
+mode = "output" # LED Verde

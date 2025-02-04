@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico1", "top": 66.45, "left": 199.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led_vermelho1",
+      "top": 142.8,
+      "left": 8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_amarelo1",
+      "top": 190.8,
+      "left": 8,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_azul1",
+      "top": 238.8,
+      "left": 8,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-button", "id": "botao1", "top": 58, "left": 90.6, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "resistor1",
+      "top": 255.95,
+      "left": 71.4,
+      "attrs": { "resistance": "330", "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resistor2",
+      "top": 179.15,
+      "left": 71.4,
+      "attrs": { "resistance": "330", "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resistor3",
+      "top": 217.55,
+      "left": 71.4,
+      "attrs": { "resistance": "330", "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "pico1:GP2", "resistor1:1", "", [] ],
+    [ "resistor1:2", "led_vermelho1:A", "", [] ],
+    [ "led_vermelho1:C", "pico1:GND", "", [] ],
+    [ "pico1:GP3", "resistor2:1", "", [] ],
+    [ "resistor2:2", "led_amarelo1:A", "", [] ],
+    [ "led_amarelo1:C", "pico1:GND", "", [] ],
+    [ "pico1:GP6", "resistor3:1", "", [] ],
+    [ "resistor3:2", "led_azul1:A", "", [] ],
+    [ "led_azul1:C", "pico1:GND", "", [] ],
+    [ "botao1:1", "pico1:GP5", "", [] ],
+    [ "botao1:2", "pico1:GND", "", [] ],
+    [ "resistor1:2", "pico1:GP13", "green", [ "v0" ] ],
+    [ "resistor3:2", "pico1:GP12", "green", [ "v0" ] ],
+    [ "resistor2:2", "pico1:GP11", "green", [ "v0" ] ],
+    [ "led_azul1:A", "resistor1:1", "green", [ "v0", "h28.8" ] ],
+    [ "led_amarelo1:A", "resistor3:1", "green", [ "v0", "h38.4" ] ],
+    [ "led_vermelho1:A", "resistor2:1", "green", [ "v0" ] ],
+    [ "led_azul1:C", "pico1:GND.2", "green", [ "v0", "h-47.6", "v-144" ] ],
+    [ "led_amarelo1:C", "pico1:GND.2", "green", [ "v0", "h-47.6", "v-86.4" ] ],
+    [ "led_vermelho1:C", "pico1:GND.2", "green", [ "v0", "h-47.6", "v-38.4" ] ]
+  ],
+  "dependencies": {}
+}
